@@ -1,9 +1,9 @@
 # Built using Docker 1.5.0
 #
 # To Build:
-#   sudo docker build --force-rm=true -t visualjeff/ember-cli-light:0.2.3 .
+#   docker build --force-rm=true -t visualjeff/ember-cli-light:0.2.3 .
 # To Run:
-#   sudo docker run -d -p 80:4200 -t visualjeff/ember-cli-light:0.2.3
+#   docker run -t -i -p 4200:4200 -p 35729:35729 visualjeff/ember-cli-light:latest /bin/bash
 # 
 
 FROM alpine:edge 
@@ -12,7 +12,8 @@ RUN apk update
 RUN apk add --update bash wget git iojs && rm -rf /var/cache/apk/*
 RUN apk update
 RUN apk upgrade
-RUN npm install -g ember-cli bower phantomjs
+RUN npm install -g ember-cli@0.2.5 bower phantomjs
 RUN npm cache clean && bower cache clean --allow-root
 EXPOSE 4200 35729
+WORKDIR /root
 CMD ["bash"]
