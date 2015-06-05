@@ -12,7 +12,7 @@ RUN apk update
 RUN apk add --update bash wget git iojs && rm -rf /var/cache/apk/*
 RUN apk update
 RUN apk upgrade
-RUN npm install -g ember-cli@0.2.6 bower phantomjs
+RUN npm install -g ember-cli@0.2.7 bower phantomjs
 RUN npm cache clean && bower cache clean --allow-root
 EXPOSE 4200 35729
 WORKDIR /root
