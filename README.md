@@ -6,9 +6,9 @@ ember-cli-light
 * Alpine Linux
 * Bash, git, curl, wget
 * Iojs v2.2.1-r0 and npm
-* Ember-cli v1.13.6, bower & phantomjs
+* Ember-cli v1.13.7, bower & phantomjs
 
-Size of the image: 262mb.
+Size of the image is roughly: 262mb.
 
 To run the container interactively:
 
